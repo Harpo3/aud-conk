@@ -1,7 +1,7 @@
 # audconk
 Audconk is for use with conky audacious-qt5, and provides mp3 tag info and artwork to your DE via conky.
 
-Once installed, you will need to first creat a directory, (1) mkdir ~.local/share/conkydacious, (2) then enable the Song Change plugin,
+Once installed, you will need to first create a directory, (1) mkdir ~.local/share/conkydacious, (2) then enable the Song Change plugin,
 in Audacious. Under the plugin's first command field: "Command to run when starting a new song:", enter the path and command
 for this program. You can then use the below sample .conkyrc code to modify conky to display the result. Note, a track 
 must be started to activiate this program and therefore activate conky.
