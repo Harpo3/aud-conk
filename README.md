@@ -15,15 +15,15 @@ must be started to activiate this program and therefore provide the files to con
 
 Here are conky lines you using the audtool utility (included with audacious-qt5) for displaying other tag information in conky:
 
-${exec audtool --current-song-tuple-data artist | fold -s -w 62} - ${color Grey}${font Terminus:size=8}
-${exec audtool --current-song-tuple-data album | fold -s -w 62}
-(${exec audtool --current-song-tuple-data year})
-${font Terminus:size=8:bold}${color 0077ff}${exec audtool --current-song-tuple-data title | fold -s -w 62}
-${color Grey}${font Terminus:size=8}Time: ${exec audtool --current-song-output-length}/${exec audtool --current-song-length}
-Bitrate:${exec audtool --current-song-bitrate-kbps} Rating code:${exec cat ~/.local/share/conkydacious/currgpnum.txt}
-Art Size:${exec cat ~/.local/share/conkydacious/currartsize.txt}
-${color Grey}${font Terminus:size=7}${exec audtool --current-song-tuple-data comment | fold -s -w 69 | head -n 8}
-${image ~/.local/share/conkydacious/folder.jpg -p 0,388 -s 250x250 -n -f1}
+<br>${exec audtool --current-song-tuple-data artist | fold -s -w 62} - ${color Grey}${font Terminus:size=8}</br>
+<br>${exec audtool --current-song-tuple-data album | fold -s -w 62}</br>
+<br>(${exec audtool --current-song-tuple-data year})</br>
+<br>${font Terminus:size=8:bold}${color 0077ff}${exec audtool --current-song-tuple-data title | fold -s -w 62}</br>
+<br>${color Grey}${font Terminus:size=8}Time: ${exec audtool --current-song-output-length}/${exec audtool --current-song-length}</br>
+<br>Bitrate:${exec audtool --current-song-bitrate-kbps} Rating code:${exec cat ~/.local/share/conkydacious/currgpnum.txt}</br>
+<br>Art Size:${exec cat ~/.local/share/conkydacious/currartsize.txt}</br>
+<br>${color Grey}${font Terminus:size=7}${exec audtool --current-song-tuple-data comment | fold -s -w 69 | head -n 8}</br>
+<br>${image ~/.local/share/conkydacious/folder.jpg -p 0,388 -s 250x250 -n -f1}</br>
 
 
 See Conky sample script (sample .conkyrc file) for full example. (Includes other script data, and you will need to adapt coordinates for your arrangement. The sample was written for a dual monitor setup. It will likely not work for you 'as is'.)
