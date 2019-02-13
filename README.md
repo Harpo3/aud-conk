@@ -13,7 +13,7 @@ in Audacious. Under the plugin's first command field: "Command to run when start
 for this program. You can then use the sample .conkyrc to modify conky to display the result. Note, a track 
 must be started to activiate this program and therefore provide the files to conky.
 
-Here are conky lines you using the audtool utility (included with audacious-qt5) for displaying other tag information in conky:
+Here are sample conky lines you can tailor for your conky install and the audtool utility (for audacious-qt5) so tag information and artwork can be diplayed in conky:
 
 <br>${exec audtool --current-song-tuple-data artist | fold -s -w 62} - ${color Grey}${font Terminus:size=8}</br>
 <br>${exec audtool --current-song-tuple-data album | fold -s -w 62}</br>
