@@ -1,0 +1,26 @@
+#!/bin/bash
+# Sample bash file for launching audconk using the audacious song change plug in
+# Runs immediately on a song change
+#Provides tag info and art to conky. Notifies the user if the song has not yet been rated.
+
+      /home/user_name/conkyscripts/audacious/audconk
+      audtool --current-song-filename > ~/.local/share/audconk/foo
+      
+      # Note the below source is unique - you will need to tailor this to your use
+      grep -F -f ~/.local/share/audconk/foo /home/user_name/data/mmdata/python_script_files/pyall_rated.csv > ~/.local/share/audconk/foo2
+      rm ~/.local/share/audconk/foo
+      cut -d , -f 10 ~/.local/share/audconk/foo2 > ~/.local/share/audconk/foo3
+      rm ~/.local/share/audconk/foo2
+      foo4=$(echo "($(cat ~/.local/share/audconk/foo3)-25569)*86400" | bc)
+      rm ~/.local/share/audconk/foo3
+      echo $(date -d @"$foo4" +%D) > ~/.local/share/audconk/lastplayed.txt
+      grep 'TIT1:' ~/.local/share/audconk/taginfofull.txt | cut -d\   -f2 > ~/.local/share/audconk/currgpnum.txt
+      #sleep 1
+      if [ "$(grep 'TIT1:' ~/.local/share/audconk/taginfofull.txt | cut -d\   -f2)" = "1" ]; then rm ~/.local/share/audconk/starrating.png;{(kdialog --title 'Needs a Rating' --passivepopup 'Enter win+num to rate this track' 4)}; fi
+      if [ "$(grep 'TIT1:' ~/.local/share/audconk/taginfofull.txt | cut -d\   -f2)" = "3" ]; then cp /home/user_name/data/mmdata/ratetracks/five.png ~/.local/share/audconk/starrating.png; fi
+      if [ "$(grep 'TIT1:' ~/.local/share/audconk/taginfofull.txt | cut -d\   -f2)" = "4" ]; then cp /home/user_name/data/mmdata/ratetracks/four.png ~/.local/share/audconk/starrating.png; fi
+      if [ "$(grep 'TIT1:' ~/.local/share/audconk/taginfofull.txt | cut -d\   -f2)" = "5" ]; then cp /home/user_name/data/mmdata/ratetracks/threeonehalf.png ~/.local/share/audconk/starrating.png; fi
+      if [ "$(grep 'TIT1:' ~/.local/share/audconk/taginfofull.txt | cut -d\   -f2)" = "6" ]; then cp /home/user_name/data/mmdata/ratetracks/three.png ~/.local/share/audconk/starrating.png; fi
+      if [ "$(grep 'TIT1:' ~/.local/share/audconk/taginfofull.txt | cut -d\   -f2)" = "7" ]; then cp /home/user_name/data/mmdata/ratetracks/twoonehalf.png ~/.local/share/audconk/starrating.png; fi
+      if [ "$(grep 'TIT1:' ~/.local/share/audconk/taginfofull.txt | cut -d\   -f2)" = "8" ]; then cp /home/user_name/data/mmdata/ratetracks/two.png ~/.local/share/audconk/starrating.png; fi
+  
