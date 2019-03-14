@@ -26,5 +26,5 @@ Here are sample conky lines you can tailor for your conky install and the audtoo
 <br>${image ~/.local/share/conkydacious/folder.jpg -p 0,388 -s 250x250 -n -f1}</br>
 
 
-See Conky sample script (sample .conkyrc file) for full example. (Includes other script data, and you will need to adapt coordinates for your arrangement. The sample was written for a dual monitor setup. It will likely not work for you 'as is'.)
+See Conky sample script (sample .conkyrc file) in docs folder for full example. (Includes other script data, and you will need to adapt coordinates for your arrangement. The sample was written for a dual monitor setup. It will likely not work for you 'as is'.)
 
