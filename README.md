@@ -8,7 +8,7 @@ program produces and places in that directory:
 folder.jpg (artwork image)
 currartsize.txt (size in bytes of artwork)
 
-Once installed, you will need to first create a directory, (1) mkdir ~.local/share/audconk, then (2) enable the Song Change plugin,
+Once installed, you will need to first create a directory, (1) mkdir ~/.local/share/audconk, then (2) enable the Song Change plugin,
 in Audacious. Under the plugin's first command field: "Command to run when starting a new song:", enter the path and command
 for this program. You can then use the sample .conkyrc to modify conky to display the result. Note, a track 
 must be started to activiate this program and therefore provide the files to conky. There is a sample (not usable without tailoring) bash script in the tools folder. The example shows some steps for processing other tag info.
