@@ -1,4 +1,6 @@
 # audconk
+<img src="http://i.imgur.com/uwStIye.png..." data-canonical-src="http://i.imgur.com/uwStIye.png" width="502" height="600" />
+<p>
 Audconk is for use with conky, audacious, and audacious-plugins (specifically, the song-change plugin). It provides the album artwork to conky for display on your desktop.
 
 It assumes your artwork is a single .jpg file stored in the album folder of your music library named <i>folder.jpg</i>, as in: "/radiohead/ok_computer/folder.jpg."
